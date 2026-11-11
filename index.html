@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Wanboi Construction Ltd - Quality affordable homes in Papua New Guinea. Build your dream 4-bedroom home under K200,000. Full house plans and material lists available.">
+    <meta name="keywords" content="Wanboi Construction, house plans PNG, affordable homes Papua New Guinea, Lae construction, 4 bedroom house design PNG">
+    <title>Wanboi Construction Ltd | Quality Homes for a Better Tomorrow</title>
+    <style>
+        :root {
+            --primary: #0B5E3B;
+            --primary-dark: #08442B;
+            --primary-light: #127A4E;
+            --accent: #E67E22;
+            --accent-hover: #D35400;
+            --text-dark: #1A1A1A;
+            --text-muted: #555;
+            --bg-light: #F8F9F7;
+            --white: #FFFFFF;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            gap: 20px;
+        }
+
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 220px;
+        }
+
+        .logo-box {
+            width: 60px;
+            height: 60px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            color: #888;
+            font-size: 11px;
+            text-align: center;
+            line-height: 1.3;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 8px 14px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            transition: all 0.25s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .header-cta {
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.25s;
+            white-space: nowrap;
+        }
+
+        .header-cta:hover {
+            background: var(--accent-hover);
+        }
+
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            color: white;
+            padding: 90px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h100v100H0z' fill='none'/%3E%3Cpath d='M20 80 L50 20 L80 80 Z' fill='rgba(255,255,255,0.03)'/%3E%3C/svg%3E");
+            opacity: 0.6;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(4px);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #F1C40F;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 32px;
+            max-width: 560px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.7);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            border-color: white;
+        }
+
+        /* ===== FEATURES STRIP ===== */
+        .features-strip {
+            background: var(--bg-light);
+            padding: 40px 0;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 10px;
+        }
+
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin: 0 auto 12px;
+        }
+
+        .feature-item h3 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+            color: var(--primary-dark);
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* ===== SECTION COMMON ===== */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-header .eyebrow {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* ===== FLAGSHIP DESIGN ===== */
+        .flagship {
+            background: var(--white);
+        }
+
+        .flagship-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .flagship-image {
+            background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+            border-radius: var(--radius);
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .flagship-image .placeholder-text {
+            text-align: center;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 20px;
+        }
+
+        .flagship-image .placeholder-text span {
+            display: block;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .flagship-content h2 {
+            font-size: 1.9rem;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .flagship-content p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 1.02rem;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            background: var(--primary);
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ===== SERVICES ===== */
+        .services {
+            background: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--primary);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+        }
+
+        .service-card .icon {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.98rem;
+        }
+
+        /* ===== WHY US ===== */
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .why-points {
+            display: grid;
+            gap: 24px;
+        }
+
+        .why-point {
+            display: flex;
+            gap: 16px;
+        }
+
+        .why-point .num {
+            width: 42px;
+            height: 42px;
+            background: var(--primary);
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .why-point h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+            color: var(--primary-dark);
+        }
+
+        .why-point p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ===== CTA BANNER ===== */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-size: 2.1rem;
+            margin-bottom: 16px;
+        }
+
+        .cta-banner p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* ===== CONTACT TEASER ===== */
+        .contact-teaser {
+            background: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: 1.9rem;
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 28px;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 18px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+
+        .contact-item .icon-box {
+            width: 44px;
+            height: 44px;
+            background: #e8f5e9;
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item strong {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--primary-dark);
+        }
+
+        .contact-item span {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .quick-form {
+            background: var(--bg-light);
+            padding: 36px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .quick-form h3 {
+            margin-bottom: 20px;
+            color: var(--primary-dark);
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #0A2E1C;
+            color: #c8d6c8;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo-text {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #c8d6c8;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #F1C40F;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.9rem;
+        }
+
+
+        /* ===== FIVE-IMAGE HOME SHOWCASE ===== */
+        .home-showcase {
+            position: relative;
+            overflow: hidden;
+            padding: 82px 0 76px;
+            background:
+                radial-gradient(ellipse at 12% 10%, rgba(230,126,34,.08), transparent 36%),
+                linear-gradient(180deg, #f8faf7 0%, #ffffff 100%);
+        }
+        .showcase-heading {
+            max-width: 760px;
+            margin: 0 auto 34px;
+            text-align: center;
+        }
+        .showcase-eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: var(--accent);
+            font-size: .82rem;
+            font-weight: 800;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+        }
+        .showcase-heading h2 {
+            margin-bottom: 12px;
+            color: var(--primary-dark);
+            font-size: clamp(1.8rem, 4vw, 2.65rem);
+            line-height: 1.15;
+        }
+        .showcase-heading p {
+            color: var(--text-muted);
+            font-size: 1.04rem;
+        }
+        .showcase-slider {
+            position: relative;
+            isolation: isolate;
+            height: clamp(340px, 49vw, 590px);
+            overflow: hidden;
+            border: 5px solid rgba(255,255,255,.9);
+            border-radius: 22px;
+            background: #173d2c;
+            box-shadow: 0 22px 60px rgba(8,68,43,.18);
+        }
+        .showcase-track, .showcase-slide {
+            position: absolute;
+            inset: 0;
+        }
+        .showcase-slide {
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1.45s ease-in-out, visibility 1.45s ease-in-out;
+        }
+        .showcase-slide.is-active {
+            z-index: 1;
+            opacity: 1;
+            visibility: visible;
+        }
+        .showcase-slide img {
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            object-fit: cover;
+            transform: scale(1.075);
+            transition: transform 5.8s cubic-bezier(.2,.65,.25,1);
+        }
+        .showcase-slide.is-active img {
+            transform: scale(1);
+        }
+        .showcase-shade {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(5,30,19,.76) 0%, rgba(5,30,19,.35) 48%, rgba(5,30,19,.04) 100%),
+                        linear-gradient(0deg, rgba(0,0,0,.2), transparent 45%);
+        }
+        .showcase-caption {
+            position: absolute;
+            z-index: 2;
+            left: clamp(24px, 6vw, 76px);
+            bottom: clamp(68px, 9vw, 104px);
+            max-width: 570px;
+            color: white;
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 1s ease .25s, transform 1.15s cubic-bezier(.2,.7,.2,1) .2s;
+        }
+        .showcase-slide.is-active .showcase-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .showcase-caption span {
+            display: inline-block;
+            margin-bottom: 13px;
+            color: #ffd49c;
+            font-size: .78rem;
+            font-weight: 800;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+        }
+        .showcase-caption h3 {
+            margin-bottom: 12px;
+            font-size: clamp(1.9rem, 4.4vw, 3.45rem);
+            line-height: 1.08;
+            text-shadow: 0 3px 18px rgba(0,0,0,.2);
+        }
+        .showcase-caption p {
+            max-width: 460px;
+            color: rgba(255,255,255,.92);
+            font-size: clamp(.95rem, 1.6vw, 1.12rem);
+        }
+        .showcase-sparkles {
+            position: absolute;
+            z-index: 3;
+            inset: 0;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .sparkle {
+            position: absolute;
+            color: #ffe3a8;
+            font-style: normal;
+            text-shadow: 0 0 9px rgba(255,225,164,.95), 0 0 22px rgba(255,255,255,.65);
+            animation: sparkle-drift 4.8s ease-in-out infinite;
+        }
+        .sparkle-one { top: 16%; left: 16%; font-size: 19px; animation-delay: -.8s; }
+        .sparkle-two { top: 27%; left: 61%; font-size: 25px; animation-delay: -2.2s; }
+        .sparkle-three { top: 67%; left: 79%; font-size: 16px; animation-delay: -1.5s; }
+        .sparkle-four { top: 12%; left: 87%; font-size: 21px; animation-delay: -3.1s; }
+        .sparkle-five { top: 76%; left: 43%; font-size: 14px; animation-delay: -.3s; }
+        .sparkle-six { top: 48%; left: 92%; font-size: 17px; animation-delay: -2.7s; }
+        @keyframes sparkle-drift {
+            0%, 100% { opacity: .18; transform: translate3d(0, 5px, 0) scale(.72) rotate(0deg); }
+            50% { opacity: 1; transform: translate3d(0, -10px, 0) scale(1.18) rotate(24deg); }
+        }
+        .showcase-arrow {
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            display: grid;
+            width: 46px;
+            height: 46px;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,.55);
+            border-radius: 50%;
+            background: rgba(8,45,29,.42);
+            color: white;
+            font-size: 2rem;
+            line-height: 1;
+            cursor: pointer;
+            transform: translateY(-50%);
+            backdrop-filter: blur(8px);
+            transition: background .25s ease, transform .25s ease;
+        }
+        .showcase-arrow:hover { background: var(--accent); transform: translateY(-50%) scale(1.07); }
+        .showcase-prev { left: 18px; }
+        .showcase-next { right: 18px; }
+        .showcase-controls {
+            position: absolute;
+            z-index: 5;
+            right: 26px;
+            bottom: 23px;
+            left: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .showcase-dots { display: flex; align-items: center; gap: 9px; }
+        .showcase-dot {
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            border: 1px solid white;
+            border-radius: 50px;
+            background: rgba(255,255,255,.42);
+            cursor: pointer;
+            transition: width .35s ease, background .35s ease;
+        }
+        .showcase-dot.is-active { width: 29px; background: #fff; }
+        .showcase-progress {
+            width: min(180px, 34%);
+            height: 3px;
+            overflow: hidden;
+            border-radius: 9px;
+            background: rgba(255,255,255,.35);
+        }
+        .showcase-progress span {
+            display: block;
+            width: 0;
+            height: 100%;
+            background: #ffd49c;
+        }
+        .showcase-slider.is-playing .showcase-progress span {
+            animation: showcase-timer 3s linear infinite;
+        }
+        @keyframes showcase-timer { from { width: 0; } to { width: 100%; } }
+        .showcase-note {
+            margin-top: 17px;
+            color: #68766d;
+            font-size: .88rem;
+            text-align: center;
+            letter-spacing: .02em;
+        }
+        .showcase-slider:focus-visible,
+        .showcase-arrow:focus-visible,
+        .showcase-dot:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
+        }
+        @media (max-width: 600px) {
+            .home-showcase { padding: 60px 0; }
+            .showcase-slider { height: 430px; border-width: 3px; border-radius: 15px; }
+            .showcase-shade {
+                background: linear-gradient(0deg, rgba(5,30,19,.82) 0%, rgba(5,30,19,.2) 75%);
+            }
+            .showcase-caption { right: 22px; bottom: 76px; left: 22px; }
+            .showcase-arrow { width: 38px; height: 38px; font-size: 1.7rem; }
+            .showcase-prev { left: 10px; }
+            .showcase-next { right: 10px; }
+            .showcase-controls { right: 18px; bottom: 18px; left: 18px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .showcase-slide, .showcase-slide img, .showcase-caption,
+            .showcase-arrow, .showcase-dot { transition-duration: .01ms !important; }
+            .sparkle { animation: none; opacity: .65; }
+            .showcase-slider.is-playing .showcase-progress span { animation: none; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .flagship-grid,
+            .why-us-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                padding: 16px;
+            }
+            nav.active {
+                display: block;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 4px;
+            }
+            .header-cta {
+                display: none;
+            }
+            .features-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 60px 0 70px;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-placeholder">
+                <!-- LOGO SPACE: Replace the box below with your logo image -->
+                <div class="logo-box">
+                    <img  src="wanboi-logo.jpg">
+                </div>
+                <div class="logo-text">
+                    Wanboi Construction
+                    <span>Quality Homes for a Better Tomorrow</span>
+                </div>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">☰</button>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="designs.html">House Designs</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="how-to-buy.html">How to Buy</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a href="contact.html" class="header-cta">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">🏠 Based in Lae • Building Across Papua New Guinea</div>
+                <h1>Dreaming of Building Your Own Home <span>Under K200,000?</span></h1>
+                <p>Wanboi Construction delivers quality, affordable residential homes designed for PNG families. Get full house plans, material lists, and expert construction support to turn your dream into reality.</p>
+                <div class="hero-buttons">
+                    <a href="designs.html" class="btn btn-primary">View House Designs</a>
+                    <a href="contact.html" class="btn btn-outline">Talk to Us Today</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== FEATURED HOME GALLERY / AUTO SLIDER ========== -->
+    <section class="home-showcase" aria-label="Wanboi Construction home inspiration">
+        <div class="container">
+            <div class="showcase-heading">
+                <span class="showcase-eyebrow">Imagine what we can build</span>
+                <h2>Homes Designed for the Way You Live</h2>
+                <p>Explore inspiring home styles and thoughtful details for families across Papua New Guinea.</p>
+            </div>
+
+            <div class="showcase-slider" data-showcase-slider aria-roledescription="carousel"
+                 aria-label="Featured home designs" tabindex="0">
+                <div class="showcase-track">
+                    <article class="showcase-slide is-active" aria-hidden="false">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1800&amp;q=85"
+                             alt="Contemporary family home with a welcoming landscaped exterior" fetchpriority="high">
+                        <div class="showcase-shade"></div>
+                        <div class="showcase-caption">
+                            <span>01 / 05 · Inspired living</span>
+                            <h3>A place to call home</h3>
+                            <p>Thoughtful design, welcoming spaces and lasting comfort.</p>
+                        </div>
+                    </article>
+                    <article class="showcase-slide" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=1800&amp;q=85"
+                             alt="Modern residential architecture with a bright open living space" loading="lazy">
+                        <div class="showcase-shade"></div>
+                        <div class="showcase-caption">
+                            <span>02 / 05 · Modern design</span>
+                            <h3>Beautiful from every angle</h3>
+                            <p>Practical layouts with a clean, contemporary feel.</p>
+                        </div>
+                    </article>
+                    <article class="showcase-slide" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&amp;fit=crop&amp;w=1800&amp;q=85"
+                             alt="Warm, elegant home interior with natural finishes" loading="lazy">
+                        <div class="showcase-shade"></div>
+                        <div class="showcase-caption">
+                            <span>03 / 05 · Comfort at home</span>
+                            <h3>Room for family moments</h3>
+                            <p>Spaces made for everyday living and special occasions.</p>
+                        </div>
+                    </article>
+                    <article class="showcase-slide" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&amp;fit=crop&amp;w=1800&amp;q=85"
+                             alt="Elegant modern home with a spacious, light-filled design" loading="lazy">
+                        <div class="showcase-shade"></div>
+                        <div class="showcase-caption">
+                            <span>04 / 05 · Quality details</span>
+                            <h3>Made with care</h3>
+                            <p>Considered details that bring a home together.</p>
+                        </div>
+                    </article>
+                    <article class="showcase-slide" aria-hidden="true">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&amp;fit=crop&amp;w=1800&amp;q=85"
+                             alt="Inviting residential home design surrounded by greenery" loading="lazy">
+                        <div class="showcase-shade"></div>
+                        <div class="showcase-caption">
+                            <span>05 / 05 · Your next chapter</span>
+                            <h3>Start with a vision</h3>
+                            <p>Let’s shape a home that suits your family and budget.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="showcase-sparkles" aria-hidden="true">
+                    <i class="sparkle sparkle-one">✦</i>
+                    <i class="sparkle sparkle-two">✧</i>
+                    <i class="sparkle sparkle-three">✦</i>
+                    <i class="sparkle sparkle-four">✧</i>
+                    <i class="sparkle sparkle-five">✦</i>
+                    <i class="sparkle sparkle-six">✧</i>
+                </div>
+
+                <button class="showcase-arrow showcase-prev" type="button" aria-label="Previous image">‹</button>
+                <button class="showcase-arrow showcase-next" type="button" aria-label="Next image">›</button>
+
+                <div class="showcase-controls">
+                    <div class="showcase-dots" role="group" aria-label="Choose a featured image">
+                        <button class="showcase-dot is-active" type="button" aria-label="Show image 1" aria-current="true"></button>
+                        <button class="showcase-dot" type="button" aria-label="Show image 2"></button>
+                        <button class="showcase-dot" type="button" aria-label="Show image 3"></button>
+                        <button class="showcase-dot" type="button" aria-label="Show image 4"></button>
+                        <button class="showcase-dot" type="button" aria-label="Show image 5"></button>
+                    </div>
+                    <span class="showcase-progress" aria-hidden="true"><span></span></span>
+                </div>
+            </div>
+            <p class="showcase-note">A little inspiration for the home you’ve been dreaming of.</p>
+        </div>
+    </section>
+
+    <!-- ========== FEATURES STRIP ========== -->
+    <div class="features-strip">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">📐</div>
+                    <h3>Full House Plans</h3>
+                    <p>Complete designs + material lists</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🏗️</div>
+                    <h3>Construction Ready</h3>
+                    <p>Build yourself or hire us</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <h3>Budget Friendly</h3>
+                    <p>Homes designed under K200k</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🇵🇬</div>
+                    <h3>PNG Wide</h3>
+                    <p>We build anywhere in PNG</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FLAGSHIP DESIGN ========== -->
+    <section class="flagship">
+        <div class="container">
+            <div class="flagship-grid">
+                <div class="flagship-image">
+                    <div class="placeholder-text">
+                        <span>🏡</span>
+                        4-Bedroom Master Ensuite<br>
+                        House Design Preview<br>
+                        <small style="font-weight:400;opacity:0.7"><
+                            <img src="1792416879699.jpg">
+                            /small>
+                    </div>
+                </div>
+                <div class="flagship-content">
+                    <div class="eyebrow" style="color:var(--accent);font-weight:600;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;">Featured Design</div>
+                    <h2>4-Bedroom Master Ensuite Residential House</h2>
+                    <p>Our most popular elevated family home — spacious, practical, and built for Papua New Guinea conditions. Perfect for growing families who want quality without overspending.</p>
+                    <ul class="feature-list">
+                        <li>4 spacious bedrooms including a master bedroom with ensuite</li>
+                        <li>Open-plan living and dining area for family gatherings</li>
+                        <li>Modern kitchen and bathroom facilities</li>
+                        <li>Front verandah and rear balcony</li>
+                        <li>Elevated design with galvanized steel stump posts</li>
+                        <li>Attractive roofing and contemporary exterior finish</li>
+                    </ul>
+                    <a href="4-bedroom-master-ensuite.html" class="btn btn-primary">View Full Design Details →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES ========== -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">What We Offer</div>
+                <h2>Complete Building Solutions</h2>
+                <p>From ready-to-build plans to full construction services — we support you at every stage of your home-building journey.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">📋</div>
+                    <h3>House Plans & Material Lists</h3>
+                    <p>Purchase complete architectural plans, detailed material lists, and supporting documents so you can plan your budget accurately and start building with confidence.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🏗️</div>
+                    <h3>Full Construction Services</h3>
+                    <p>Let our experienced team handle the entire build — from foundation to finishing. We work across Papua New Guinea and adapt to local conditions and materials.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🤝</div>
+                    <h3>Project Consultation</h3>
+                    <p>Discuss your budget, site, preferred design, or custom requirements. We welcome negotiations and are happy to tailor solutions to your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section>
+        <div class="container">
+            <div class="why-us-grid">
+                <div>
+                    <div class="section-header" style="text-align:left;margin:0 0 30px;">
+                        <div class="eyebrow">Why Wanboi Construction</div>
+                        <h2>Built for Papua New Guinea Families</h2>
+                        <p>We understand the unique challenges and opportunities of building homes in PNG — from climate and materials to realistic budgets.</p>
+                    </div>
+                </div>
+                <div class="why-points">
+                    <div class="why-point">
+                        <div class="num">01</div>
+                        <div>
+                            <h4>Local Knowledge</h4>
+                            <p>Based in Lae, Morobe Province, we know PNG building conditions, material availability, and practical design solutions.</p>
+                        </div>
+                    </div>
+                    <div class="why-point">
+                        <div class="num">02</div>
+                        <div>
+                            <h4>Affordable by Design</h4>
+                            <p>Our house designs are carefully planned so quality homes can realistically be built under K200,000 depending on location and finishes.</p>
+                        </div>
+                    </div>
+                    <div class="why-point">
+                        <div class="num">03</div>
+                        <div>
+                            <h4>Transparent Process</h4>
+                            <p>Clear plans, material lists, and cost factors help you budget properly before you start. No surprises.</p>
+                        </div>
+                    </div>
+                    <div class="why-point">
+                        <div class="num">04</div>
+                        <div>
+                            <h4>Flexible Support</h4>
+                            <p>Buy the plans and build yourself, or engage us for full construction. We work with you either way.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA BANNER ========== -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Ready to Start Building Your Dream Home?</h2>
+            <p>Get the full house plan, material list, and expert guidance. Contact us today to discuss your project and budget.</p>
+            <div class="hero-buttons" style="justify-content:center;">
+                <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+                <a href="how-to-buy.html" class="btn btn-outline">Learn How to Buy Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT TEASER ========== -->
+    <section class="contact-teaser">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Let’s Talk About Your Project</h2>
+                    <p>Whether you want to purchase house plans or discuss a full construction project, our team is ready to help. We welcome discussions and negotiations.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="icon-box">📧</div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>wanboiconstruction@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box">📱</div>
+                            <div>
+                                <strong>Phone / WhatsApp</strong>
+                                <span>8175 0937</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon-box">📍</div>
+                            <div>
+                                <strong>Address</strong>
+                                <span>P O Box 411, Lae, Morobe Province<br>Papua New Guinea</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quick-form">
+                    <h3>Send a Quick Enquiry</h3>
+                    <form action="mailto:wanboiconstruction@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone / WhatsApp</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="e.g. 7xxx xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">I’m interested in</label>
+                            <select id="interest" name="interest">
+                                <option value="4-bedroom plans">4-Bedroom House Plans</option>
+                                <option value="3-bedroom plans">3-Bedroom House Plans</option>
+                                <option value="2-bedroom plans">2-Bedroom House Plans</option>
+                                <option value="storeys plans">Storeys House Plans</option>
+                                <option value="other plans">Other House Designs</option>
+                                <option value="full construction">Full Construction Service</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your location, budget, or questions..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-placeholder" style="margin-bottom:16px;">
+                        <div class="logo-box" style="border-color:#2a5a3a;background:#0f3d28;color:#8ab89a;">
+                             <img  src="wanboi-logo.jpg">
+                        </div>
+                        <div class="logo-text" style="color:white;">
+                            Wanboi Construction
+                            <span style="color:#8ab89a;">Quality Homes for a Better Tomorrow</span>
+                        </div>
+                    </div>
+                    <p>A local Papua New Guinean construction company based in Lae, Morobe Province. Specialising in affordable residential designs and quality building services across PNG.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="designs.html">House Designs</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="how-to-buy.html">How to Buy Plans</a></li>
+                        <li><a href="resources.html">Building Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📧 wanboiconstruction@gmail.com</li>
+                        <li>📱 8175 0937</li>
+                        <li>📍 P O Box 411, Lae<br>Morobe Province, PNG</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Wanboi Construction Ltd. All rights reserved.</span>
+                <span>Proudly building across Papua New Guinea 🇵🇬</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu close on link click
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+
+        // Five-image showcase: advances every 3 seconds with gentle transitions.
+        (() => {
+            const slider = document.querySelector('[data-showcase-slider]');
+            if (!slider) return;
+
+            const slides = Array.from(slider.querySelectorAll('.showcase-slide'));
+            const dots = Array.from(slider.querySelectorAll('.showcase-dot'));
+            const previous = slider.querySelector('.showcase-prev');
+            const next = slider.querySelector('.showcase-next');
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            const interval = 3000;
+            let activeIndex = 0;
+            let timer = null;
+
+            function showSlide(index) {
+                activeIndex = (index + slides.length) % slides.length;
+                slides.forEach((slide, i) => {
+                    const active = i === activeIndex;
+                    slide.classList.toggle('is-active', active);
+                    slide.setAttribute('aria-hidden', String(!active));
+                });
+                dots.forEach((dot, i) => {
+                    const active = i === activeIndex;
+                    dot.classList.toggle('is-active', active);
+                    if (active) dot.setAttribute('aria-current', 'true');
+                    else dot.removeAttribute('aria-current');
+                });
+                slider.classList.remove('is-playing');
+                void slider.offsetWidth;
+                if (!reducedMotion.matches) slider.classList.add('is-playing');
+            }
+
+            function stopTimer() {
+                if (timer) window.clearInterval(timer);
+                timer = null;
+                slider.classList.remove('is-playing');
+            }
+            function startTimer() {
+                stopTimer();
+                if (reducedMotion.matches) return;
+                slider.classList.add('is-playing');
+                timer = window.setInterval(() => showSlide(activeIndex + 1), interval);
+            }
+            function goTo(index) {
+                showSlide(index);
+                startTimer();
+            }
+
+            previous.addEventListener('click', () => goTo(activeIndex - 1));
+            next.addEventListener('click', () => goTo(activeIndex + 1));
+            dots.forEach((dot, index) => dot.addEventListener('click', () => goTo(index)));
+
+            // Pause while visitors interact with or read the current image.
+            slider.addEventListener('mouseenter', stopTimer);
+            slider.addEventListener('mouseleave', startTimer);
+            slider.addEventListener('focusin', stopTimer);
+            slider.addEventListener('focusout', event => {
+                if (!slider.contains(event.relatedTarget)) startTimer();
+            });
+            slider.addEventListener('keydown', event => {
+                if (event.key === 'ArrowLeft') { event.preventDefault(); goTo(activeIndex - 1); }
+                if (event.key === 'ArrowRight') { event.preventDefault(); goTo(activeIndex + 1); }
+            });
+            reducedMotion.addEventListener?.('change', startTimer);
+
+            showSlide(0);
+            startTimer();
+        })();
+
+    </script>
+ 
+    
+</body>
+</html>

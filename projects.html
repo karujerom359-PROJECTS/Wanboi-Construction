@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projects by Wanboi Construction – See examples of residential homes and building work across Papua New Guinea.">
+    <meta name="keywords" content="Wanboi Construction projects, PNG house builds, residential construction Lae, completed homes Papua New Guinea">
+    <title>Projects | Wanboi Construction Ltd</title>
+    <style>
+        :root {
+            --primary: #0B5E3B;
+            --primary-dark: #08442B;
+            --primary-light: #127A4E;
+            --accent: #E67E22;
+            --accent-hover: #D35400;
+            --text-dark: #1A1A1A;
+            --text-muted: #555;
+            --bg-light: #F8F9F7;
+            --white: #FFFFFF;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            gap: 20px;
+        }
+
+        .logo-placeholder {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 220px;
+        }
+
+        .logo-box {
+            width: 60px;
+            height: 60px;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f5f5;
+            color: #888;
+            font-size: 11px;
+            text-align: center;
+            line-height: 1.3;
+            flex-shrink: 0;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            padding: 8px 14px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            transition: all 0.25s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .header-cta {
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.25s;
+            white-space: nowrap;
+        }
+
+        .header-cta:hover {
+            background: var(--accent-hover);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 70px 0 60px;
+            text-align: center;
+        }
+
+        .page-hero .eyebrow {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .page-hero h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 50px;
+        }
+
+        .section-header .eyebrow {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* ===== PROJECTS GRID ===== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+        }
+
+        .project-image {
+            background: linear-gradient(145deg, #e8f5e9, #c8e6c9);
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .project-image .placeholder-text {
+            text-align: center;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 16px;
+        }
+
+        .project-image .placeholder-text span {
+            display: block;
+            font-size: 2.6rem;
+            margin-bottom: 8px;
+        }
+
+        .project-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .project-badge.completed {
+            background: var(--accent);
+        }
+
+        .project-body {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-body h3 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 8px;
+        }
+
+        .project-meta {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .project-body p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-tag {
+            background: #e8f5e9;
+            color: var(--primary-dark);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 500;
+        }
+
+        /* ===== NOTE BOX ===== */
+        .note-box {
+            background: #FFF8F0;
+            border-left: 5px solid var(--accent);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 28px 32px;
+            margin-top: 50px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .note-box h3 {
+            color: var(--primary-dark);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .note-box p {
+            color: var(--text-muted);
+            margin: 0;
+            font-size: 1.02rem;
+        }
+
+        /* ===== CTA ===== */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: white;
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .cta-banner h2 {
+            font-size: 2.1rem;
+            margin-bottom: 16px;
+        }
+
+        .cta-banner p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 620px;
+            margin: 0 auto 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.7);
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+            border-color: white;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #0A2E1C;
+            color: #c8d6c8;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo-text {
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 1.05rem;
+            margin-bottom: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #c8d6c8;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover {
+            color: #F1C40F;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .page-hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                padding: 16px;
+            }
+            nav.active {
+                display: block;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 4px;
+            }
+            .header-cta {
+                display: none;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-hero {
+                padding: 50px 0 40px;
+            }
+            .page-hero h1 {
+                font-size: 1.9rem;
+            }
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo-placeholder">
+                <!-- LOGO SPACE: Replace the box below with your logo image -->
+                <div class="logo-box">
+                    <img src ="wanboi-logo.jpg">
+                </div>
+                <div class="logo-text">
+                    Wanboi Construction
+                    <span>Quality Homes for a Better Tomorrow</span>
+                </div>
+            </div>
+
+            <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav').classList.toggle('active')">☰</button>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="designs.html">House Designs</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="how-to-buy.html">How to Buy</a></li>
+                    <li><a href="projects.html" class="active">Projects</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a href="contact.html" class="header-cta">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="eyebrow">Our Work</div>
+            <h1>Projects & Builds</h1>
+            <p>Examples of residential designs and construction work delivered for families across Papua New Guinea.</p>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS GRID ===== -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <div class="eyebrow">Gallery</div>
+                <h2>Selected Projects & Designs</h2>
+                <p>From plan packages to completed homes — here is a snapshot of the work we do.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge">Featured Design</div>
+                        <div class="placeholder-text">
+                            <span>🏡</span>
+                            4-Bedroom Master Ensuite
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>4-Bedroom Master Ensuite</h3>
+                        <div class="project-meta">Elevated Family Home</div>
+                        <p>Our flagship residential design featuring four bedrooms, master ensuite, open living, verandah and rear balcony. Popular choice for growing families.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">4 Bedrooms</span>
+                            <span class="project-tag">Elevated</span>
+                            <span class="project-tag">Master Ensuite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge completed">Completed</div>
+                        <div class="placeholder-text">
+                            <span>🏠</span>
+                            3-Bedroom Low-set
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>3-Bedroom Low-set Home</h3>
+                        <div class="project-meta">Rural Setting</div>
+                        <p>Practical low-set three-bedroom home designed for rural and peri-urban locations. Efficient layout and cost-effective construction.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">3 Bedrooms</span>
+                            <span class="project-tag">Low-set</span>
+                            <span class="project-tag">Rural</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge">Design</div>
+                        <div class="placeholder-text">
+                            <span>🏘️</span>
+                            2-Bedroom Starter
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>2-Bedroom Starter Home</h3>
+                        <div class="project-meta">Compact & Affordable</div>
+                        <p>Ideal first home or compact family house. Smaller footprint helps keep material and labour costs manageable while still delivering quality living space.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">2 Bedrooms</span>
+                            <span class="project-tag">Compact</span>
+                            <span class="project-tag">Budget Friendly</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge">Urban</div>
+                        <div class="placeholder-text">
+                            <span>🏙️</span>
+                            High-set Urban House
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>High-set Residential (Urban)</h3>
+                        <div class="project-meta">Urban Setting</div>
+                        <p>Elevated design suited to urban and semi-urban sites. Good underfloor clearance, ventilation and modern exterior presentation.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Elevated</span>
+                            <span class="project-tag">Urban</span>
+                            <span class="project-tag">High-set</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge completed">In Progress</div>
+                        <div class="placeholder-text">
+                            <span>🚧</span>
+                            Custom Family Home
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Custom Family Residence</h3>
+                        <div class="project-meta">Client-Specified Design</div>
+                        <p>Example of a tailored project developed around the client’s preferred layout, site conditions and budget requirements.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Custom</span>
+                            <span class="project-tag">Client Brief</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-badge">Nationwide</div>
+                        <div class="placeholder-text">
+                            <span>🇵🇬</span>
+                            PNG-Wide Delivery
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Projects Across PNG</h3>
+                        <div class="project-meta">Multiple Locations</div>
+                        <p>We support clients and projects in different provinces. Plans and construction discussions are available nationwide.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Nationwide</span>
+                            <span class="project-tag">Lae Based</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-box">
+                <h3>📷 Add Your Real Project Photos</h3>
+                <p>This page currently uses placeholder images. Replace each green box with actual photos of completed or in-progress homes, floor plans, or site progress. Real photos will greatly increase trust and conversion for visitors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA BANNER ===== -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>Want Results Like These for Your Family?</h2>
+            <p>Contact us to discuss plans, construction, or a custom design that suits your site and budget.</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                <a href="designs.html" class="btn btn-outline">View House Designs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-placeholder" style="margin-bottom:16px;">
+                        <div class="logo-box" style="border-color:#2a5a3a;background:#0f3d28;color:#8ab89a;">
+                          <img src ="wanboi-logo.jpg">
+                        </div>
+                        <div class="logo-text" style="color:white;">
+                            Wanboi Construction
+                            <span style="color:#8ab89a;">Quality Homes for a Better Tomorrow</span>
+                        </div>
+                    </div>
+                    <p>A local Papua New Guinean construction company based in Lae, Morobe Province. Specialising in affordable residential designs and quality building services across PNG.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="designs.html">House Designs</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="how-to-buy.html">How to Buy Plans</a></li>
+                        <li><a href="resources.html">Building Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📧 wanboiconstruction@gmail.com</li>
+                        <li>📱 8175 0937</li>
+                        <li>📍 P O Box 411, Lae<br>Morobe Province, PNG</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Wanboi Construction Ltd. All rights reserved.</span>
+                <span>Proudly building across Papua New Guinea 🇵🇬</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('nav').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
